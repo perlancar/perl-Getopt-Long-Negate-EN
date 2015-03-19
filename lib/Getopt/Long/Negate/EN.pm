@@ -1,5 +1,8 @@
 package Getopt::Long::Negate::EN;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
@@ -21,6 +24,9 @@ sub negations_for_option {
         return ("no-$word", "no$word");
     }
 }
+
+1;
+# ABSTRACT: Better negation of boolean option names
 
 =head1 SYNOPSIS
 
@@ -54,5 +60,5 @@ two cases, C<--without-foo> and C<--isnt-foo> are better option names.
 
 None are exported by default, but they are exportable.
 
-=head1 negations_for_option($str) => list
+=head2 negations_for_option($str) => list
 
