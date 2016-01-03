@@ -12,13 +12,25 @@ our @EXPORT_OK = qw(negations_for_option);
 
 sub negations_for_option {
     my $word = shift;
+
     if    ($word =~ /\Awith([_-].+)/   ) { return ("without$1") }
     elsif ($word =~ /\Awithout([_-].+)/) { return ("with$1")    }
+
     elsif ($word =~ /\Ais([_-].+)/     ) { return ("isnt$1")    }
     elsif ($word =~ /\Aisnt([_-].+)/   ) { return ("is$1")      }
     elsif ($word =~ /\Aare([_-].+)/    ) { return ("arent$1")   }
     elsif ($word =~ /\Aarent([_-].+)/  ) { return ("are$1")     }
+
+    elsif ($word =~ /\Ahas([_-].+)/    ) { return ("hasnt$1")   }
+    elsif ($word =~ /\Ahave([_-].+)/   ) { return ("havent$1")  }
+    elsif ($word =~ /\Ahasnt([_-].+)/  ) { return ("has$1")     }
+    elsif ($word =~ /\Ahavent([_-].+)/ ) { return ("have$1")    }
+
+    elsif ($word =~ /\Acan([_-].+)/    ) { return ("cant$1")    }
+    elsif ($word =~ /\Acant([_-].+)/   ) { return ("can$1")     }
+
     elsif ($word =~ /\Ano[_-](.+)/     ) { return ($1)          }
+
     else {
         # default from Getopt::Long
         return ("no-$word", "no$word");
@@ -61,4 +73,3 @@ two cases, C<--without-foo> and C<--isnt-foo> are better option names.
 None are exported by default, but they are exportable.
 
 =head2 negations_for_option($str) => list
-
