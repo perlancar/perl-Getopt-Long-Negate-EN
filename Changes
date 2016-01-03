@@ -1,5 +1,12 @@
 Revision history for Getopt-Long-Negate-EN
 
+0.03    2016-01-03 (PERLANCAR)
+
+	- No functional changes.
+
+	- [doc] Update Synopsis.
+
+
 0.02    2016-01-03 (PERLANCAR)
 
 	- Add can <-> cant, has <-> hasnt, have <-> havent.
