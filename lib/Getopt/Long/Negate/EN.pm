@@ -52,9 +52,16 @@ sub negations_for_option {
 
  @negs = negations_for_option('is-foo');      # ('isnt-foo')
  @negs = negations_for_option('isnt-foo');    # ('is-foo')
-
  @negs = negations_for_option('are-foo');     # ('isnt-foo')
  @negs = negations_for_option('arent-foo');   # ('arent-foo')
+
+ @negs = negations_for_option('has-foo');     # ('hasnt-foo')
+ @negs = negations_for_option('hasnt-foo');   # ('has-foo')
+ @negs = negations_for_option('have-foo');    # ('havent-foo')
+ @negs = negations_for_option('havent-foo');  # ('have-foo')
+
+ @negs = negations_for_option('can-foo');     # ('cant-foo')
+ @negs = negations_for_option('cant-foo');    # ('can-foo')
 
  @negs = negations_for_option('no-foo');      # ('foo')
 
