@@ -29,8 +29,15 @@ sub negations_for_option {
     elsif ($word =~ /\Acan([_-].+)/    ) { return ("cant$1")    }
     elsif ($word =~ /\Acant([_-].+)/   ) { return ("can$1")     }
 
-    elsif ($word =~ /\Aenable([_-].+)/ ) { return ("disable$1") }
-    elsif ($word =~ /\Adisable([_-].+)/) { return ("enable$1")  }
+    elsif ($word =~ /\Aenabled([_-].+)/ ) { return ("disabled$1") }
+    elsif ($word =~ /\Adisabled([_-].+)/) { return ("enabled$1")  }
+    elsif ($word =~ /\Aenable([_-].+)/ )  { return ("disable$1")  }
+    elsif ($word =~ /\Adisable([_-].+)/)  { return ("enable$1")   }
+
+    elsif ($word =~ /\Aallowed([_-].+)/ )   { return ("disallowed$1") }
+    elsif ($word =~ /\Adisallowed([_-].+)/) { return ("allowed$1")    }
+    elsif ($word =~ /\Aallow([_-].+)/ )     { return ("disallow$1")   }
+    elsif ($word =~ /\Adisallow([_-].+)/)   { return ("allow$1")      }
 
     elsif ($word =~ /\Ano[_-](.+)/     ) { return ($1)          }
 
@@ -65,6 +72,16 @@ sub negations_for_option {
 
  @negs = negations_for_option('can-foo');     # ('cant-foo')
  @negs = negations_for_option('cant-foo');    # ('can-foo')
+
+ @negs = negations_for_option('enabled-foo'); # ('disabled-foo')
+ @negs = negations_for_option('disabled-foo');# ('enabled-foo')
+ @negs = negations_for_option('enable-foo');  # ('disable-foo')
+ @negs = negations_for_option('disable-foo'); # ('enable-foo')
+
+ @negs = negations_for_option('allowed-foo');    # ('disallowed-foo')
+ @negs = negations_for_option('disallowed-foo'); # ('allowed-foo')
+ @negs = negations_for_option('allow-foo');      # ('disallow-foo')
+ @negs = negations_for_option('disallow-foo');   # ('allow-foo')
 
  @negs = negations_for_option('no-foo');      # ('foo')
 

@@ -32,8 +32,15 @@ is_deeply([negations_for_option('havent_foo')], ['have_foo']);
 is_deeply([negations_for_option('can-foo')], ['cant-foo']);
 is_deeply([negations_for_option('cant_foo')], ['can_foo']);
 
+is_deeply([negations_for_option('disabled-foo')], ['enabled-foo']);
+is_deeply([negations_for_option('enabled_foo')], ['disabled_foo']);
 is_deeply([negations_for_option('disable-foo')], ['enable-foo']);
 is_deeply([negations_for_option('enable_foo')], ['disable_foo']);
+
+is_deeply([negations_for_option('disallowed-foo')], ['allowed-foo']);
+is_deeply([negations_for_option('allowed_foo')], ['disallowed_foo']);
+is_deeply([negations_for_option('disallow-foo')], ['allow-foo']);
+is_deeply([negations_for_option('allow_foo')], ['disallow_foo']);
 
 is_deeply([negations_for_option('no-foo')], ['foo']);
 is_deeply([negations_for_option('no_foo')], ['foo']);
