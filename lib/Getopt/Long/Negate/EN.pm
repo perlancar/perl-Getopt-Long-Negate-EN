@@ -29,6 +29,9 @@ sub negations_for_option {
     elsif ($word =~ /\Acan([_-].+)/    ) { return ("cant$1")    }
     elsif ($word =~ /\Acant([_-].+)/   ) { return ("can$1")     }
 
+    elsif ($word =~ /\Aenable([_-].+)/ ) { return ("disable$1") }
+    elsif ($word =~ /\Adisable([_-].+)/) { return ("enable$1")  }
+
     elsif ($word =~ /\Ano[_-](.+)/     ) { return ($1)          }
 
     else {
