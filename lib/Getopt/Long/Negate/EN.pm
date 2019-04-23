@@ -39,6 +39,9 @@ sub negations_for_option {
     elsif ($word =~ /\Aallow([_-].+)/ )     { return ("disallow$1")   }
     elsif ($word =~ /\Adisallow([_-].+)/)   { return ("allow$1")      }
 
+    elsif ($word =~ /\Ainclude([_-].+)/ ) { return ("exclude$1") }
+    elsif ($word =~ /\Aexclude([_-].+)/ ) { return ("include$1") }
+
     elsif ($word =~ /\Ano[_-](.+)/     ) { return ($1)          }
 
     else {
@@ -82,6 +85,9 @@ sub negations_for_option {
  @negs = negations_for_option('disallowed-foo'); # ('allowed-foo')
  @negs = negations_for_option('allow-foo');      # ('disallow-foo')
  @negs = negations_for_option('disallow-foo');   # ('allow-foo')
+
+ @negs = negations_for_option('include-foo'); # ('exclude-foo')
+ @negs = negations_for_option('exclude-foo'); # ('include-foo')
 
  @negs = negations_for_option('no-foo');      # ('foo')
 
