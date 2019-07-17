@@ -1,30 +1,30 @@
-0.060   2019-04-23 (PERLANCAR)
+0.060   2019-04-23  Released-By: PERLANCAR
 
 	- Add include<->exclude.
 
 
-0.05    2016-03-01 (PERLANCAR)
+0.05    2016-03-01  Released-By: PERLANCAR
 
 	- Add enabled<->disabled, allowed<->disallowed, allow<->disallow.
 
 
-0.04    2016-03-01 (PERLANCAR)
+0.04    2016-03-01  Released-By: PERLANCAR
 
 	- Add enable <-> disable.
 
 
-0.03    2016-01-03 (PERLANCAR)
+0.03    2016-01-03  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- [doc] Update Synopsis.
 
 
-0.02    2016-01-03 (PERLANCAR)
+0.02    2016-01-03  Released-By: PERLANCAR
 
 	- Add can <-> cant, has <-> hasnt, have <-> havent.
 
 
-0.01    2015-03-19 (PERLANCAR)
+0.01    2015-03-19  Released-By: PERLANCAR
 
         - First release. Extracted from Perinci::Sub::Getargs::Argv.
